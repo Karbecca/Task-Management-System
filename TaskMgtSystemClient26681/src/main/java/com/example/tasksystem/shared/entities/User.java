@@ -117,4 +117,12 @@ public class User implements Serializable {
     public void setProjects(Set<Project> projects) {
         this.projects = projects;
     }
+
+    @Override
+    public String toString() {
+        if (fullName != null && !fullName.isEmpty()) {
+            return fullName + " (" + username + ")";
+        }
+        return username;
+    }
 }

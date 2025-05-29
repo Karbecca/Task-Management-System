@@ -106,4 +106,9 @@ public class Project implements Serializable {
     public void setMembers(Set<User> members) {
         this.members = members;
     }
+
+    @Override
+    public String toString() {
+        return projectName != null ? projectName : "Unnamed Project";
+    }
 }
